@@ -114,7 +114,7 @@ for (var i = 0; i < odd.length; i++){
 
 // TRAVERSING DOM //
 //-------------------
-var itemList = document.querySelector('#items');
+//var itemList = document.querySelector('#items');
 //parentNode
 //console.log(itemList.parentNode);
 //itemList.parentNode.style.backgroundColor = 'lightgreen';
@@ -161,7 +161,7 @@ var itemList = document.querySelector('#items');
 //console.log(itemList.previousElementSibling);
 //itemList.previousElementSibling.style.color = 'green';
 
-
+/*
 
 // CREATE A DIV
 //-------------
@@ -193,4 +193,47 @@ console.log(newDiv)
 newDiv.style.fontsize = '300px';
 
 container.insertBefore(newDiv, h1);
+*/
 
+// PART 3 EVENT
+
+
+// old way new way is event listener
+//function buttonClick(){
+    //console.log('Button clicked');
+    //document.getElementById('header-title').textContent= 'Changed'
+    //document.querySelector('#main').style.backgroundColor='red';
+//}
+// here you can put the name of function to call it 
+//var button = document.getElementById('button').addEventListener('click', buttonClick) // Syntax = target.addEventListener(event, function)
+/* JavaScript provides an Eventhandler in the form of the " addEventListener () "
+method. this handler can be attached to a specific HTML element 
+(var button = document.getElementById('button').addEventListener('click', buttonClick))
+you wish to monitor events for,
+and the element can have more than one handler attached */
+
+/*
+// Other way
+var button = document.getElementById('button').addEventListener
+('click', function(){
+    console.log(1234);
+});
+*/
+
+
+
+
+function buttonClick(e){
+    //document.getElementById('header-title').textContent= 'Changed'
+    //document.querySelector('#main').style.backgroundColor='red';
+    //console.log(e)
+    //console.log(e.target);
+    //console.log(e.target.id);
+    //console.log(e.target.className);
+    //console.log(e.target.classList);
+    //var output = document.getElementById('output');
+    //output.innerHTML = '<h3>'+e.target.id+'</h3>';
+    //console.log(e.type);
+}
+
+var button = document.getElementById('button').addEventListener('click', buttonClick)
