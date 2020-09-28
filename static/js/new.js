@@ -222,7 +222,7 @@ var button = document.getElementById('button').addEventListener
 
 
 
-
+/*
 function buttonClick(e){
     //document.getElementById('header-title').textContent= 'Changed'
     //document.querySelector('#main').style.backgroundColor='red';
@@ -234,6 +234,23 @@ function buttonClick(e){
     //var output = document.getElementById('output');
     //output.innerHTML = '<h3>'+e.target.id+'</h3>';
     //console.log(e.type);
+    //console.log(e.clientX)//position of the mouse to the window
+    //console.log(e.clientY)// from top to down
+    //console.log(e.offsetX) // mouse position
+    //console.log(e.offsetY)
+    //console.log(e.altKey); // hold alt and click if its true
+    //console.log(e.ctrlKey);
+    //console.log(e.shiftKey);
 }
 
 var button = document.getElementById('button').addEventListener('click', buttonClick)
+*/
+var button = document.getElementById('button');
+//button.addEventListener('click', runEvent);
+//button.addEventListener('dblclick', runEvent);
+//button.addEventListener('mousedown', runEvent);
+button.addEventListener('mouseup', runEvent);
+function runEvent(e){
+    console.log('EVENT TYPE: '+e.type);
+
+}
