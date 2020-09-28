@@ -131,3 +131,66 @@ var itemList = document.querySelector('#items');
 //console.log(itemList.childNodes);// not good practice children instead
 
 // children node
+//console.log(itemList.children);//will be a list HTML collection
+
+//console.log(itemList.children[1]); // will select item 1
+//var children = itemList.children
+//console.log(children[1])
+//children[1].style.backgroundColor = 'yellow';
+
+//FirstChild is not a good practice
+//console.log(itemList.firstchild);
+
+//FirstElementChild
+//console.log(itemList.firstElementChild); 
+//itemList.firstElementChild.textContent = "Hello Mpoyi";
+//itemList.firstElementChild.innerHTML = "Hello Mpoyi";
+
+
+//lastChild
+//console.log(itemList.lastElementChild); 
+//itemList.lastElementChild.textContent = "Hello Mpoyi";
+//itemList.lastElementChild.innerHTML = "Hello Im the last";
+
+//nextSibling
+//console.log(itemList.nextSibling);
+//console.log(itemList.nextElementSibling);
+
+//previousSibling
+//console.log(itemList.previousSibling); // here its a text
+//console.log(itemList.previousElementSibling);
+//itemList.previousElementSibling.style.color = 'green';
+
+
+
+// CREATE A DIV
+//-------------
+
+var newDiv = document.createElement('div');
+
+//Add Class
+newDiv.className = 'hello';
+
+//Add id
+newDiv.id = 'hello1'
+
+//Add attribute
+newDiv.setAttribute('title', 'Hello Div');
+
+//Create a text Node
+var newDivText = document.createTextNode('Mpoyi is a cool guy');
+
+//Add text to div
+newDiv.appendChild(newDivText)
+
+// Insert it to DOM
+var container = document.querySelector('header .container');
+var h1 = document.querySelector('header h1');
+
+console.log(newDiv)
+
+// change font size
+newDiv.style.fontsize = '300px';
+
+container.insertBefore(newDiv, h1);
+
