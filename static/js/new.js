@@ -205,7 +205,9 @@ container.insertBefore(newDiv, h1);
     //document.querySelector('#main').style.backgroundColor='red';
 //}
 // here you can put the name of function to call it 
+
 //var button = document.getElementById('button').addEventListener('click', buttonClick) // Syntax = target.addEventListener(event, function)
+
 /* JavaScript provides an Eventhandler in the form of the " addEventListener () "
 method. this handler can be attached to a specific HTML element 
 (var button = document.getElementById('button').addEventListener('click', buttonClick))
@@ -245,12 +247,68 @@ function buttonClick(e){
 
 var button = document.getElementById('button').addEventListener('click', buttonClick)
 */
-var button = document.getElementById('button');
+
+
+/*
+// FOR THE MOUSE//
+//var button = document.getElementById('button');
+//var box =document.getElementById('box')
 //button.addEventListener('click', runEvent);
 //button.addEventListener('dblclick', runEvent);
+//button.addEventListener('mouseup', runEvent);
 //button.addEventListener('mousedown', runEvent);
-button.addEventListener('mouseup', runEvent);
+
+//box.addEventListener('mouseenter', runEvent);// when you drag mouse inside the  box is enter its only for element (<di>)
+//box.addEventListener('mouseleave', runEvent); // drag outside the box is leave
+//box.addEventListener('mouseover', runEvent); // if you drag in the box also the text//
+//box.addEventListener('mouseout', runEvent);
+//box.addEventListener('mousemove', runEvent);
+
 function runEvent(e){
     console.log('EVENT TYPE: '+e.type);
 
+    //output.innerHTML = '<h3> MouseX: '+e.offsetX+' </h3><h3>MouseY: '+e.offsetY+'</h3>'; // when you drag the mouse will show numbers
+    //box.style.backgroundColor = "rgb("+e.offsetX+", "+e.offsetY+", 40)"; //rgb: red, green, blue and the color will change in the box
+    document.body.style.backgroundColor = "rgb("+e.offsetX+", "+e.offsetY+", 40)"; //the entire body will change when you drag
+
 }
+*/
+
+
+var itemInput = document.querySelector('input[type="text"]');
+var form = document.querySelector('form');
+var select =document.querySelector('select')
+
+//itemInput.addEventListener('keydown', runEvent);
+//itemInput.addEventListener('keyup', runEvent);
+//itemInput.addEventListener('keypress', runEvent);
+
+//itemInput.addEventListener('focus', runEvent); // click inside the form is focus
+//itemInput.addEventListener('blur', runEvent); // click outside the form is blur
+
+//itemInput.addEventListener('cut', runEvent);
+//itemInput.addEventListener('paste', runEvent);
+//itemInput.addEventListener('input', runEvent);
+
+//select.addEventListener('change', runEvent);
+//select.addEventListener('input', runEvent)
+
+form.addEventListener('submit', runEvent);
+
+function runEvent(e){
+    console.log('EVENT TYPE: '+e.type);
+    //console.log(e.target.value);// target what you typing // for change event as well it will target the value you select
+    //document.getElementById('output').innerHTML= '<h3>'+e.target.value+ '</h3>'; // it will put the the in the browser by output location in html
+    //document.body.style.display = 'none'; // if we cut every will leave the display
+    e.preventDefault(); //submit button is now working is not submitting to the external file
+
+    
+}
+
+
+
+
+
+//NB: querySelector ; its when you target the tag like <form....>, <select...>
+// getElementById ; when you target id 
+//e = event
